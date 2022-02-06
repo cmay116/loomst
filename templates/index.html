@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link rel="stylesheet" type="text/css" href="../static/index.css">
+
+    <meta charset="UTF-8">
+    <title>Loomst</title>
+</head>
+<body>
+<div class="box">
+    <div style="font-family: 'Ubuntu',monospace">
+        {% for row in content %}
+            {% if index == loop.index %}
+                <b>|{{ loop.index }}| {{ row }}</b>
+            {% else %}
+                <div>|{{ loop.index }}| {{ row }}</div>
+            {% endif %}
+        {% endfor %}
+    </div>
+</div>
+<div class="buttons">
+    <form action="/previous" method=post>
+        <input value="Previous" type="submit" class="button prev">
+    </form>
+    <form action="/next" method=post>
+        <input value="Next" type="submit" class="button next">
+    </form>
+</div>
+</body>
+</html>

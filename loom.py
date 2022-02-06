@@ -24,6 +24,10 @@ loomNums = {"1": 134,
 red = (255, 0, 0)
 pixels.fill((0, 0, 0))
 
+def lightItUp(row):
+    global splitArray
+    lightLin(splitArray[row], loomNums, red)
+
 def lightLin(l, d, c):
       for shaft in l:
        pixels[d[shaft]] = c

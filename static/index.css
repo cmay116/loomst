@@ -1,0 +1,23 @@
+html,body{
+    font-family: 'Ubuntu', serif;
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+.box {
+
+}
+.buttons {
+    text-align: center;
+}
+.button {
+    height:50px;
+    width:100px;
+}
+
+form {
+    display:inline-block;
+}
+.next {
+
+
+}
