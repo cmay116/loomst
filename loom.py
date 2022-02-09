@@ -3,30 +3,31 @@ import time, sys
 import neopixel
 pixels = neopixel.NeoPixel(board.D18, 150,brightness=0.1)
 
-loomNums = {"1": 134,
-            "2": 135,
-            "3": 136,
-            "4": 137,
-            "5": 138,
-            "6": 139,
-            "7": 140,
-            "8": 141,
-            "9": 142,
-            "10": 143,
-            "11": 144,
-            "12": 145,
-            "13": 146,
-            "14": 147,
-            "15": 148,
-            "16": 149,
+loomNums = {"1": 0,
+            "2": 1,
+            "3": 2,
+            "4": 3,
+            "5": 4,
+            "6": 5,
+            "7": 6,
+            "8": 7,
+            "9": 8,
+            "10": 9,
+            "11": 10,
+            "12": 11,
+            "13": 12,
+            "14": 13,
+            "15": 14,
+            "16": 15,
             }
 
-red = (255, 0, 0)
+red = (0, 255, 0)
 pixels.fill((0, 0, 0))
 
 def lightItUp(row):
+    off()
     global splitArray
-    lightLin(splitArray[row], loomNums, red)
+    lightLin(splitArray[row - 1], loomNums, red)
 
 def lightLin(l, d, c):
       for shaft in l:
@@ -37,23 +38,13 @@ def off():
 
 testArray = []
 
-with open('numbers.txt') as my_file:
+with open('static/numbers.txt') as my_file:
     testArray = my_file.readlines()
 splitArray = []
 for line in testArray:
       junk = line.strip().split(",")
       splitArray.append(junk)
       
-while(True):
-      try:
-       for line in splitArray:
-                lightLin(line, loomNums, red)
-                input(line)
-                off()
-      except KeyboardInterrupt:
-           print("\ngoodbye")
-           off()
-           sys.exit()
                
          
          

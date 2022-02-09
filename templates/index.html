@@ -13,9 +13,9 @@
     <div style="font-family: 'Ubuntu',monospace">
         {% for row in content %}
             {% if index == loop.index %}
-                <b>|{{ loop.index }}| {{ row }}</b>
+                <b>{{ loop.index }}: {{ row }}</b>
             {% else %}
-                <div>|{{ loop.index }}| {{ row }}</div>
+                <div>{{ loop.index }}: {{ row }}</div>
             {% endif %}
         {% endfor %}
     </div>
@@ -26,6 +26,11 @@
     </form>
     <form action="/next" method=post>
         <input value="Next" type="submit" class="button next">
+    </form>
+</div>
+<div class="off">
+    <form action="/off" method=post>
+        <input value="Off" type="submit" class="button">
     </form>
 </div>
 </body>

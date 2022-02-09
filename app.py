@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request
 import time, sys
-# from loom import *
+from loom import *
 
 app = Flask(__name__)
 testArray = []
@@ -31,20 +31,24 @@ def hello_world():  # put application's code here
 
 
 @app.route("/next", methods=["POST", "GET"])
-def next():
+def nextRoute():
     global index
     index = loop(index, testArray)
-    # lightItUp(index)
+    lightItUp(index)
     return render_template("index.html", content=testArray, index=index)
 
 
 @app.route("/previous", methods=["POST", "GET"])
-def previous():
+def previousRoute():
     global index
     index = reverse(index, testArray)
-    # lightItUp(index)
+    lightItUp(index)
     return render_template("index.html", content=testArray, index=index)
 
+@app.route("/off", methods=["POST", "GET"])
+def offRoute():
+    off()
+    return render_template("index.html")
 
 if __name__ == '__main__':
-    app.run(debug=True, port=5001)
+    app.run(host="0.0.0.0", port=5001)

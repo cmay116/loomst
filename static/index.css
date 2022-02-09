@@ -1,6 +1,6 @@
 html,body{
     font-family: 'Ubuntu', serif;
-    font-size: 15px;
+    font-size: 14px;
     letter-spacing: 1px;
 }
 .box {
@@ -16,6 +16,9 @@ html,body{
 
 form {
     display:inline-block;
+}
+.off {
+    text-align: center;
 }
 .next {
 
