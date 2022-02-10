@@ -10,6 +10,7 @@ with open('static/numbers.txt') as my_file:
 index = 0
 
 
+
 def loop(next, array):
     if next + 1 > len(array):
         return 1
@@ -27,7 +28,7 @@ def reverse(next, array):
 
 @app.route('/')
 def hello_world():  # put application's code here
-    return render_template("index.html")
+    return render_template("home.html")
 
 
 @app.route("/next", methods=["POST", "GET"])
@@ -48,7 +49,7 @@ def previousRoute():
 @app.route("/off", methods=["POST", "GET"])
 def offRoute():
     off()
-    return render_template("index.html")
+    return render_template("home.html")
 
 if __name__ == '__main__':
     app.run(host="0.0.0.0", port=5001)

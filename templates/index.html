@@ -7,13 +7,14 @@
 
     <meta charset="UTF-8">
     <title>Loomst</title>
+    <link rel="shortcut icon" type="image/jpg" href="../static/favicon.ico"/>
 </head>
 <body>
-<div class="box">
-    <div style="font-family: 'Ubuntu',monospace">
+<div>
+    <div class="box" style="font-family: 'Ubuntu',monospace">
         {% for row in content %}
             {% if index == loop.index %}
-                <b>{{ loop.index }}: {{ row }}</b>
+                <b class="target">{{ loop.index }}: {{ row }}</b>
             {% else %}
                 <div>{{ loop.index }}: {{ row }}</div>
             {% endif %}
