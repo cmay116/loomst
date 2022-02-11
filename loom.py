@@ -1,6 +1,8 @@
 import board
 import time, sys
 import neopixel
+import RPi.GPIO as GPIO
+GPIO.setup(18, GPIO.OUT)
 pixels = neopixel.NeoPixel(board.D18, 150,brightness=0.1)
 
 loomNums = {"1": 0,
