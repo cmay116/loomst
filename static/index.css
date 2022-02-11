@@ -36,6 +36,28 @@ html, body {
     text-align: center;
 }
 
+.prev {
+
+    display: inline-block;
+    padding: 10px 25px;
+    font-weight: 900;
+    background-color: rgba(58, 134, 239, 0.78);
+    border-radius: 16px;
+    margin: 30px 0px;
+    height: 50px;
+    width: 100px;
+}
+.next {
+    display: inline-block;
+    padding: 10px 25px;
+    font-weight: 900;
+    background-color: rgba(58, 134, 239, 0.78);
+    border-radius: 16px;
+    margin: 30px 0px;
+    height: 50px;
+    width: 100px;
+}
+
 .button {
     display: inline-block;
     padding: 10px 25px;
@@ -53,4 +75,14 @@ form {
 
 .off {
     text-align: center;
+}
+.off-button {
+    display: inline-block;
+    padding: 10px 25px;
+    font-weight: 900;
+    background-color: rgba(239, 58, 64, 0.9);
+    border-radius: 16px;
+    margin: 30px 0px;
+    height: 50px;
+    width: 100px;
 }
