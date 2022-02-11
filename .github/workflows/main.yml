@@ -23,7 +23,7 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       - name: change ownership of dir
-        run: sudo chown -R $USER:$USER /home/github/actions-runner/_work/loomst
+        run: sudo chown -R $USER:$USER /home/pi/actions-runner/_work/loomst
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
